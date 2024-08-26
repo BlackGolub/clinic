@@ -1,18 +1,24 @@
-'use client'
-
 import { useState } from 'react'
+import PriceDisplay from './price_display'
 
 interface Item {
 	name: string
 	price?: number
+	imgSrc?: string
+}
+
+interface CurrencyData {
+	alt: string
+	imgSrc: string
 }
 
 interface DropdownProps {
 	title: string
 	items: Item[]
+	currencyData: CurrencyData
 }
 
-export const Dropdown: React.FC<DropdownProps> = ({ title, items }) => {
+const Dropdown: React.FC<DropdownProps> = ({ title, items, currencyData }) => {
 	const [isOpen, setIsOpen] = useState(false)
 
 	const toggleDropdown = () => {
@@ -29,18 +35,18 @@ export const Dropdown: React.FC<DropdownProps> = ({ title, items }) => {
 			</div>
 			<div
 				className={`overflow-hidden transition-all duration-600 ${
-					isOpen ? 'max-h-96' : 'max-h-0'
+					isOpen ? 'h-auto' : 'max-h-0'
 				}`}
 			>
 				<ul className='bg-[rgba(125,185,179,0.9)] text-white p-8 space-y-2'>
 					{items.map((item, index) => (
 						<li
 							key={index}
-							className='flex justify-between border-b border-white pb-2 text-lg'
+							className='flex justify-between items-center border-b border-white pb-2 text-lg'
 						>
-							<span>{item.name}</span>
+							<span className='flex-1 mr-4 break-words'>{item.name}</span>
 							{item.price !== undefined && (
-								<span className='ml-4'>{item.price}</span>
+								<PriceDisplay price={item.price} currencyData={currencyData} />
 							)}
 						</li>
 					))}
@@ -49,3 +55,5 @@ export const Dropdown: React.FC<DropdownProps> = ({ title, items }) => {
 		</div>
 	)
 }
+
+export default Dropdown

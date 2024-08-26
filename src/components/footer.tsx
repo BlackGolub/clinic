@@ -5,11 +5,11 @@ const Footer: React.FC = () => {
 	const sections = [
 		{
 			title: 'Услуги',
-			items: services.map((link: ILinks) => link.name),
+			items: services,
 		},
 		{
 			title: 'Навигация',
-			items: navLinks.map((link: ILinks) => link.name),
+			items: navLinks,
 		},
 		{
 			title: 'Контакты',
@@ -24,18 +24,18 @@ const Footer: React.FC = () => {
 					<div key={index} className='flex-1'>
 						<h2 className='text-xl font-bold mb-4'>{section.title}</h2>
 						<ul>
-							{section.items.map((item, itemIndex) => (
+							{section.items.map((item: ILinks | string, itemIndex) => (
 								<li key={itemIndex} className='mb-2'>
-									{section.title !== 'Контакты' ? (
+									{typeof item === 'string' ? (
+										item
+									) : (
 										<Link
-											href={navLinks[itemIndex].href}
-											title={navLinks[itemIndex].title}
+											href={item.href}
+											title={item.title}
 											className='hover:underline'
 										>
-											{item}
+											{item.name}
 										</Link>
-									) : (
-										item
 									)}
 								</li>
 							))}

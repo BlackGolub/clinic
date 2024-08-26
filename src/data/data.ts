@@ -34,11 +34,17 @@ export const contacts: string[] = [
 ]
 
 export const info: IInfoItem[] = [
-	{ icon: '', text: 'Гарантия качества 1 год' },
-	{ icon: '', text: 'Личный номер телефона. Всегда на связи с пациентом' },
-	{ icon: '', text: 'Фиксированная цена' },
-	{ icon: '', text: 'Прием ведется Пн-Сб, с 15:00 до 19:00' },
-	{ icon: '', text: 'Более 1000 довольных пациентов' },
+	{ icon: '/warranty.svg', text: 'Гарантия качества 1 год' },
+	{
+		icon: '/phone.svg',
+		text: 'Личный номер телефона. Всегда на связи с пациентом',
+	},
+	{ icon: '/cash.svg', text: 'Фиксированная цена' },
+	{
+		icon: '/calendar.svg',
+		text: 'Прием ведется Пн-Сб, с 15:00 до 19:00',
+	},
+	{ icon: '/like.svg', text: 'Более 1000 довольных пациентов' },
 ]
 
 export const facts: string[] = [

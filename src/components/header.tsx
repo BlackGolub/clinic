@@ -8,7 +8,7 @@ const Header: React.FC = () => {
 			<div className='mx-auto px-[30px] p-2 flex flex-row items-center justify-between'>
 				<Link href='/'>
 					<Image
-						src={`${process.env.BASE_PATH}/logo_transparent.png`}
+						src={`/logo_transparent.png`}
 						alt='Logo'
 						width={150}
 						height={150}
@@ -18,11 +18,11 @@ const Header: React.FC = () => {
 					{navLinks.map((el: ILinks, index: number) => (
 						<Link
 							key={index}
-							className='inline-flex items-center justify-center bg-transparent border-none hover:opacity-60 hover:border-black border-gray-300 transition-all duration-300 py-3 px-4 text-2xl cursor-pointer'
+							className='inline-flex items-center justify-center bg-transparent border-none hover:opacity-60 hover:border-black border-gray-300 transition-all duration-300 py-3 px-4 text-3xl cursor-pointer'
 							href={el.href}
 							title={el.title}
 						>
-							<span className='text-sm md:text-xl'>{el.name}</span>
+							<span className='text-2xl md:text-2xl'>{el.name}</span>
 						</Link>
 					))}
 				</nav>
