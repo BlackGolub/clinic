@@ -38,7 +38,7 @@ export default function AboutPages() {
 			<div className='flex flex-col p-10'>
 				<div className='flex w-full mb-16'>
 					<Image
-						src={`/doctor.jpg`}
+						src={`${process.env.BASE_PATH}/doctor.jpg`}
 						alt='Фото доктора'
 						height={750}
 						width={400}

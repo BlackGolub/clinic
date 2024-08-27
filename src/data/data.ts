@@ -34,17 +34,23 @@ export const contacts: string[] = [
 ]
 
 export const info: IInfoItem[] = [
-	{ icon: '/warranty.svg', text: 'Гарантия качества 1 год' },
 	{
-		icon: '/phone.svg',
+		icon: `${process.env.BASE_PATH}/warranty.svg`,
+		text: 'Гарантия качества 1 год',
+	},
+	{
+		icon: `${process.env.BASE_PATH}/phone.svg`,
 		text: 'Личный номер телефона. Всегда на связи с пациентом',
 	},
-	{ icon: '/cash.svg', text: 'Фиксированная цена' },
+	{ icon: `${process.env.BASE_PATH}/cash.svg`, text: 'Фиксированная цена' },
 	{
-		icon: '/calendar.svg',
+		icon: `${process.env.BASE_PATH}/calendar.svg`,
 		text: 'Прием ведется Пн-Сб, с 15:00 до 19:00',
 	},
-	{ icon: '/like.svg', text: 'Более 1000 довольных пациентов' },
+	{
+		icon: `${process.env.BASE_PATH}/like.svg`,
+		text: 'Более 1000 довольных пациентов',
+	},
 ]
 
 export const facts: string[] = [

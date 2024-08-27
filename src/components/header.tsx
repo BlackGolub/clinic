@@ -8,7 +8,7 @@ const Header: React.FC = () => {
 			<div className='mx-auto px-[30px] p-2 flex flex-row items-center justify-between'>
 				<Link href='/'>
 					<Image
-						src={`/logo_transparent.png`}
+						src={`${process.env.BASE_PATH}/logo_transparent.png`}
 						alt='Logo'
 						width={150}
 						height={150}

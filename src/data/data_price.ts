@@ -5,15 +5,15 @@ export interface Currency {
 
 export const currency: Currency[] = [
 	{
-		imgSrc: '/lari.svg',
+		imgSrc: `${process.env.BASE_PATH}/lari.svg`,
 		alt: 'GEL',
 	},
 	{
-		imgSrc: '/dollar.svg',
+		imgSrc: `${process.env.BASE_PATH}/dollar.svg`,
 		alt: 'USD',
 	},
 	{
-		imgSrc: '/ruble.svg',
+		imgSrc: `${process.env.BASE_PATH}/ruble.svg`,
 		alt: 'RUB',
 	},
 ]

@@ -6,27 +6,27 @@ interface ISlide {
 
 export const slides: ISlide[] = [
 	{
-		src: '/doctor.jpg',
+		src: `${process.env.BASE_PATH}/doctor.jpg`,
 		header: 'Хирургия',
 		text: 'Хирургические процедуры в стоматологии включают удаление зубов, резекцию корней и установку имплантов. Современные технологии позволяют проводить операции с минимальной травматичностью и коротким восстановительным периодом. Особое внимание уделяется тщательной диагностике и подготовке к операциям. Послеоперационный уход включает контроль за заживлением и профилактику осложнений.',
 	},
 	{
-		src: '/doctor.jpg',
+		src: `${process.env.BASE_PATH}/doctor.jpg`,
 		header: 'Терапия',
 		text: 'Терапевтическое лечение направлено на восстановление и сохранение зубов. Основные процедуры включают пломбирование, лечение кариеса и пульпита. Используются современные материалы и методы, позволяющие добиться естественного вида и долговечности реставраций. Регулярные профилактические осмотры помогают выявить проблемы на ранней стадии и избежать серьезных вмешательств.',
 	},
 	{
-		src: '/doctor.jpg',
+		src: `${process.env.BASE_PATH}/doctor.jpg`,
 		header: 'Профилактика',
 		text: 'Профилактика — ключ к здоровью зубов и десен. Она включает регулярную профессиональную гигиену полости рта, которая включает в себя: Снятие зубного камня ультразвуком, снятие зубного налета Air Flow, полировку зубов.',
 	},
 ]
 
 export const diplomas: ISlide[] = [
-	{ src: '/diploma_h.jpg' },
-	{ src: '/diploma_ch_h.jpg' },
-	{ src: '/diploma_o.jpg' },
-	{ src: '/diploma_so.jpg' },
-	{ src: '/diploma_so2.jpg' },
-	{ src: '/diploma_v.jpg' },
+	{ src: `${process.env.BASE_PATH}/diploma_h.jpg` },
+	{ src: `${process.env.BASE_PATH}/diploma_ch_h.jpg` },
+	{ src: `${process.env.BASE_PATH}/diploma_o.jpg` },
+	{ src: `${process.env.BASE_PATH}/diploma_so.jpg` },
+	{ src: `${process.env.BASE_PATH}/diploma_so2.jpg` },
+	{ src: `${process.env.BASE_PATH}/diploma_v.jpg` },
 ]
